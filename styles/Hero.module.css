@@ -1,0 +1,308 @@
+@keyframes spin-fade {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.container {
+  padding-top: 3rem;
+  display: flex;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#hero {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.cherryDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background-color: var(--pink);
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  color: red;
+  font-weight: bold;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  font-weight: 700;
+  animation-name: spin-fade;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.miniText {
+  width: 70%;
+  color: pink;
+  font-weight: 600;
+}
+
+.btn {
+  padding: 1rem;
+  height: 50%;
+  width: 50%;
+  color: orange;
+  transition: all 0.2s ease-in-out;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  transform: scale(2);
+}
+
+.rightSide {
+  position: relative;
+}
+
+.imageContainer {
+  width: 20rem;
+  position: absolute;
+  top: -1rem;
+  left: 5rem;
+  border-radius: 90%;
+  overflow: hidden;
+  animation-name: spin-fade;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation: zoomInOut 2s infinite linear;
+}
+
+.ContactUs {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  width: max-content;
+  padding: 0rem;
+  padding-left: 0.5rem;
+  left: 25rem;
+  top: 1rem;
+  border-radius: 5rem;
+  gap: 1rem;
+  color: white;
+  background-color: red;
+  box-shadow: var(--shadow);
+}
+.ContactUs:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.ContactUs > div {
+  border-radius: 50%;
+  width: 2.5rem;
+  display: flex;
+
+  align-items: center;
+  height: 2.5rem;
+}
+
+.pizza {
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: -1rem;
+  left: 22rem;
+  width: max-content;
+}
+
+.pizza > :nth-child(1) {
+  width: 6rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.pizza > :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.pizza:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.services {
+  display: flex;
+  margin-top: 3rem;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .left {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .miniText {
+    width: 100%;
+  }
+  .rightSide {
+    position: static;
+  }
+  .imageContainer {
+    display: none;
+  }
+  .ContactUs {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .pizza {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .services {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .left {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .miniText {
+    width: 100%;
+  }
+  .rightSide {
+    position: static;
+  }
+  .imageContainer {
+    display: none;
+  }
+  .ContactUs {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .pizza {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .services {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    display: block;
+  }
+  .left {
+    display: block;
+    gap: 1rem;
+  }
+  .cherryDiv {
+    font-size: 0.6rem;
+  }
+  .heroText {
+    font-size: 30px;
+  }
+  .miniText {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    animation: zoomInOut 1s ease-in-out infinite;
+    padding: 0.5rem;
+    height: 40%;
+    width: 70%;
+    font-size: 0.8rem;
+  }
+
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .button:hover {
+    transform: scale(1.5);
+  }
+  .rightSide {
+    display: none;
+  }
+  .ContactUs {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+  }
+  .ContactUs > div {
+    width: 2rem;
+    height: 2rem;
+  }
+  .pizza {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+  }
+  .pizza > :nth-child(1) {
+    width: 4rem;
+    height: 2.5rem;
+  }
+  .services {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

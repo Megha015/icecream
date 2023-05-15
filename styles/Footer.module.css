@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 6rem;
+  align-items: center;
+  justify-content: center;
+  background: purple;
+}
+
+.container > span {
+  color: black;
+  font-weight: bold;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  gap: 0.5rem;
+  padding-bottom: 3rem;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo > span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: orange;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-bottom: 0.3rem;
+}
+.image {
+  animation: zoomInOut 2s infinite linear;
+  border-radius: 50%;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social > * {
+  fill: blue;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+}
