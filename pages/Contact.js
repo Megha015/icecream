@@ -8,17 +8,13 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const resetForm = () => {
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     // handle form submission here
     console.log(name, email, message);
-    resetForm();
+    setName("");
+    setEmail("");
+    setMessage("");
     toast.success("Message sent!");
   };
 
