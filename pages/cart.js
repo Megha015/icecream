@@ -73,8 +73,7 @@ const Cart = () => {
                       <img
                         src={imageUrl}
                         alt=""
-                        className={css.imageTd}
-                        objectFit="cover"
+                        className={`${css.imageTd} ${css.cover}`}
                         width={85}
                         height={85}
                       />
