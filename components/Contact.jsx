@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <div id="contact" className={css.contact}>
       <h2 className={css.title}>Contact Us</h2>
-      <form className={css.form} onSubmit={handleSubmit} reset>
+      <form className={css.form} onSubmit={handleSubmit}>
         <label className={css.label}>
           Name:
           <input
