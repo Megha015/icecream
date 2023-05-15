@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import css from "../styles/Contacts.module.css";
 import { toast, Toaster } from "react-hot-toast";
+import Link from "next/link";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -57,9 +58,9 @@ const Contact = () => {
         <button className={css.button} type="submit">
           Submit
         </button>
-        <a href="/" className={css.button}>
-          Home
-        </a>
+        <Link href="/">
+          <a className={css.button}>Home</a>
+        </Link>
         <Toaster />
       </form>
     </div>
