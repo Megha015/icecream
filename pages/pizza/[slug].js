@@ -59,7 +59,7 @@ const Pizza = ({ pizza }) => {
                 onClick={() => setSize(1)}
                 className={Size === 1 ? css.selected : ""}
               >
-                Medium
+                Regular
               </div>
               <div
                 onClick={() => setSize(2)}

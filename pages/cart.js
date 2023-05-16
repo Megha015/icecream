@@ -53,7 +53,7 @@ const Cart = () => {
         <div className={css.details}>
           <table className={css.table}>
             <thead>
-              <th>Pizza</th>
+              <th>IceCream</th>
               <th>Name</th>
               <th>Size</th>
               <th>Price</th>
