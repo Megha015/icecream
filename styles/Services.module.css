@@ -53,7 +53,7 @@
   color: red;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   /* styles for phone screen size */
   .heading > :nth-child(2) {
     font-size: 20px;
@@ -62,7 +62,17 @@
     font-size: 15px;
   }
   .services {
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
   }
   .ImageWrapper {
     width: 70px;
@@ -80,6 +90,7 @@
   }
   .services {
     gap: 3rem;
+    background-color: white;
   }
   .ImageWrapper {
     width: 80px;

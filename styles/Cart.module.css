@@ -82,7 +82,7 @@
   .table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 1rem;
+    border-spacing: 0.2rem;
   }
 
   .tbody > tr > td {
@@ -128,5 +128,10 @@
   .container {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .table {
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 1rem;
   }
 }
