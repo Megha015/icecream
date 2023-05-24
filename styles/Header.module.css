@@ -49,7 +49,7 @@
   display: flex;
   list-style: none;
   gap: 2rem;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   justify-content: center;
   z-index: 99;
   font-style: normal;
@@ -137,93 +137,49 @@
     opacity: 1;
   }
 }
-
-/* @media only screen and (max-width: 768px) {
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    flex: 1;
-  }
-
+@media only screen and (max-width: 768px) {
   .logo span {
     font-weight: bold;
-    font-size: 1.5rem;
-    color: orange;
-  }
-
-  .menu {
-    flex: 1;
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    justify-content: center;
-    z-index: 99;
-    font-style: normal;
-    font-weight: 800;
-    color: orangered;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 4.5rem;
-    left: 0;
-    right: 0;
-    background-color: white;
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .menu.show {
-    transform: scaleY(1);
-  }
-
-  .menu > li:hover {
-    cursor: pointer;
+    font-size: 1rem;
     color: white;
+  }
+  .menu {
+    font-size: 1rem;
+    gap: 0.5rem;
   }
 
   .rightSide {
-    flex: 1;
-    display: flex;
-    gap: 1rem;
     justify-content: flex-end;
   }
 
   .cart {
-    position: relative;
-    display: flex;
-    cursor: pointer;
-    z-index: 99;
+    order: -1;
   }
 
   .badge {
-    position: absolute;
-    display: flex;
-    background-color: var(--themeRed);
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
-    right: -0.5rem;
+    right: -0.25rem;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .menu {
-    gap: 1rem;
-    font-size: 0.8rem;
+  .logo span {
+    font-weight: bold;
+    font-size: 1rem;
   }
-} */
+  .menu {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  .rightSide {
+    justify-content: flex-end;
+  }
+
+  .cart {
+    order: -1;
+  }
+
+  .badge {
+    right: -0.25rem;
+  }
+}
