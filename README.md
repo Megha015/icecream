@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This a Next.JS app using Stripe for integrating Payment and using Sanity for Content Management System.
 
-## Getting Started
+Steps to Create the App:
+Create the required pages, components, assets, and styles as usual.
 
-First, run the development server:
+To insert icons, use npm install react-icons and then import the desired icons correctly in the file. Choose icons from the React Icons library.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+To connect SCSS (Sass) files to JSX, use npm install sass.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To play a video in the background, use the following code:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+jsx
+Copy code
+<video src={video} muted autoPlay loop type="video/mp4"></video>
+For animation effects in text, import AOS:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+jsx
+Copy code
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+useEffect(() => {
+  Aos.init({ duration: 2000 });
+}, []);
+To use yarn and install the dependencies, install yarn with npm install yarn and then use yarn to install dependencies.
 
-## Learn More
+To start the development server, run yarn dev.
 
-To learn more about Next.js, take a look at the following resources:
+Install Next.js globally using npm install -g next.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To use module CSS, follow Next.js's built-in CSS Modules.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To use images with Next.js, import Image from "next/image".
 
-## Deploy on Vercel
+To use icons, make sure to use curly braces while importing.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To use both global CSS and module CSS for the same element, make use of CSS cascading and specificity.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To create Sanity, create a folder named "sanity," and in the terminal, initialize Sanity with sanity init.
+
+If the installation hangs, press Ctrl + C and manually install the dependencies by running yarn.
+
+To start Sanity, run yarn dev.
+
+Configure Sanity Studio and define the content structure as required.
+
+Connect Sanity Studio with Visual Studio Code by creating a "lib" folder and a "client.js" file. Install the required dependencies using npm install @sanity/client.
+
+Get a Sanity token by navigating to Settings > API > Tokens and generate one.
+
+Use the Sanity token to fetch data from the browser by installing another dependency: npm install @sanity/image-url.
+
+Utilize Zustand for state management.
+
+For online payment, integrate Stripe. Log in to Stripe, turn on test mode, provide a business name, navigate to Developers > API Keys, and copy the secret key.
+
+Deployment:
+To deploy Sanity, first stop running it.
+
+Deploy the Next.js application using Vercel or other platforms of your choice.
